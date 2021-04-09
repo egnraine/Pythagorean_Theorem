@@ -21,8 +21,16 @@ public class MainActivity extends AppCompatActivity
         this.sideB = this.findViewById(R.id.sideB);
         this.answerTV = this.findViewById(R.id.answerTV);
     }
+
     public void onCalculateButtonClicked(View v)
     {
-        
+        String sideA = this.sideA.getText().toString();
+        String sideB = this.sideB.getText().toString();
+        double sA = Double.valueOf(sideA);
+        double sB = Double.valueOf(sideB);
+        double c = Math.sqrt(sA * sA + sB * sB);
+        String answer = String.valueOf(c);
+        this.answerTV.setText(answer);
     }
+
 }
